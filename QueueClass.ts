@@ -1,4 +1,38 @@
-class QueueClass {
+class Queue<T> {
+    data: T[];
+    front: number;
+    rear: number;
+
+    constructor(){
+        this.data=[];
+    }
+
+
+
+    public enqueue = (element: T) => {
+        if(this.isEmpty()){
+            this.front=0;
+            this.rear=0;
+            this.data.push(element);
+            return;
+        }
+        this.data.push(element);
+        this.rear++;
+    }
+    
+    isEmpty = () => this.data.length;
+    
+
+}
+
+let test = new Queue();
+test.enqueue(1);
+
+
+/*
+
+
+class {
 
     //private size: number;
     private front: number;
@@ -46,3 +80,5 @@ class QueueClass {
 
 
 }
+
+*/
