@@ -1,84 +1,37 @@
 class Queue<T> {
     data: T[];
-    front: number;
-    rear: number;
-
+    
     constructor(){
         this.data=[];
     }
 
+    enqueue = (element: T) => this.data.push(element);
 
+    dequeu = () => this.data.shift()
 
-    public enqueue = (element: T) => {
-        if(this.isEmpty()){
-            this.front=0;
-            this.rear=0;
-            this.data.push(element);
-            return;
-        }
-        this.data.push(element);
-        this.rear++;
-    }
+    peek = ()=> this.data[0];
     
-    isEmpty = () => this.data.length;
+    isEmpty = () => this.data.length <= 0;
     
 
 }
 
 let test = new Queue();
 test.enqueue(1);
+test.enqueue(2);
+test.enqueue(3);
+test.enqueue(4);
 
-
-/*
-
-
-class {
-
-    //private size: number;
-    private front: number;
-    private rear: number;
-    private data: T[];
-
-    constructor(size: number) {
-        this.front = -1;
-
-        this.rear = -1;
-        this.data = [];
-
-    }
-
-    enqueue(element: T): void{
-        if (this.isEmpty()){
-            this.front = 0;
-            this.rear = 0;
-        }
-        else{
-            this.rear++;
-        }
-        this.data[this.rear] = element;
-
-        
-
-    }
-    
-    dequeue(): T | undefined {
-        let poppedElement = this.data[this.front];
-        if(this.front === this.rear){
-            this.front = -1;
-            this.rear = -1;
-        }
-        else{
-            this.front++;
-        }
-        return poppedElement;
-    }
-
-
-    isEmpty(){
-        return this.front === -1 && this.rear === -1;
-    }
-
-
-}
-
-*/
+console.log(test.peek(),"peek without remove");
+test.enqueue(5);
+test.enqueue(6);
+test.dequeu();
+test.dequeu();
+test.dequeu();
+console.log(test.peek(),"peek without remove");
+test.dequeu();
+test.dequeu();
+test.dequeu();
+console.log(test.peek(),"peek without remove");
+test.dequeu();
+test.dequeu();
