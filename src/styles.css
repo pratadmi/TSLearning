@@ -1,0 +1,42 @@
+/* Reset default table styles */
+table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 20%; /* Each element takes 20% width */
+}
+
+/* Style table header */
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Style table rows */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Style the first column (Month) */
+td:first-child {
+  width: 20%; /* First column also takes 20% width */
+}
+
+/* Style the second column (Savings) */
+td:nth-child(2) {
+  width: 20%; /* Second column also takes 20% width */
+}
+
+/* Style the spaces between elements */
+td:not(:last-child) {
+  width: calc(20% - 10px); /* Subtract 10px for the border-spacing */
+}
