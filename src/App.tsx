@@ -1,24 +1,6 @@
 import { useState } from "react"
 import "./styles.css"
 let productName = "test2"
-
-export default function App(){
-
-  const [productList, setProducts] = useState("")
-  
-  return(
-    <>
-   <table>
-  <tr>
-    <td>Product1</td>
-    <td>{productList}</td>
-    <td>Product2</td>
-  </tr>
-</table>
-  
-  </> 
-)
-}
 let data: any;
 
 fetch('https://dummyjson.com/products')
@@ -32,7 +14,29 @@ fetch('https://dummyjson.com/products')
 function productHandler(data: { products: any[] }) {
   //console.log(data);
   data.products.forEach((element: any) => {
+    
     console.log(element.title);
-   
+    setProduct(element.title);
+
   });
+  
+}
+
+export default function App(){
+
+  const [productName, setProduct] = useState("")
+  //setProduct("test");
+
+  return(
+    <>
+   <table>
+  <tr>
+    <td>Product1</td>
+    <td>{productName}</td>
+    <td>Product2</td>
+  </tr>
+</table>
+  
+  </> 
+)
 }
