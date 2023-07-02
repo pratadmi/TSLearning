@@ -1,42 +1,28 @@
-/* Reset default table styles */
-table {
-  border-collapse: separate;
-  border-spacing: 10px;
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 }
 
-th,
-td {
-  padding: 8px;
-  text-align: left;
+.product-item {
+  width: calc(33.33% - 20px); /* Each item takes 33.33% width with 20px spacing */
+  margin-bottom: 20px;
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #fff;
-  width: 20%; /* Each element takes 20% width */
+  padding: 8px;
+  text-align: left;
 }
 
-/* Style table header */
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
+@media (max-width: 767px) {
+  .product-item {
+    width: calc(50% - 20px); /* On smaller screens, each item takes 50% width with 20px spacing */
+  }
 }
 
-/* Style table rows */
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Style the first column (Month) */
-td:first-child {
-  width: 20%; /* First column also takes 20% width */
-}
-
-/* Style the second column (Savings) */
-td:nth-child(2) {
-  width: 20%; /* Second column also takes 20% width */
-}
-
-/* Style the spaces between elements */
-td:not(:last-child) {
-  width: calc(20% - 10px); /* Subtract 10px for the border-spacing */
+@media (max-width: 479px) {
+  .product-item {
+    width: 100%; /* On even smaller screens, each item takes 100% width */
+  }
 }
