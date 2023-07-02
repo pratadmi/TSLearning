@@ -53,18 +53,37 @@
 
 .title {
   background-color: #ddd;
-  border-radius: 20px;
+  border-radius: 50px;
   width: 100%;
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .title h1 {
   margin-bottom: 0;
   text-align: center;
+}
+
+.logo-left,
+.logo-right {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translateY(-50%);
+}
+
+.logo-left {
+  left: 50px;
+}
+
+.logo-right {
+  right: 50px;
 }
 
 .footer {
