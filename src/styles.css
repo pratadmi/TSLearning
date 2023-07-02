@@ -26,3 +26,59 @@
     width: 100%; /* On even smaller screens, each item takes 100% width */
   }
 }
+
+.card {
+  border: 5px solid #ddd;
+  border-radius: 20px;
+  width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.card .card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
+.card-description {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.title {
+  background-color: #ddd;
+  border-radius: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: #ddd;
+  border-radius: 50px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer h3 {
+  margin-bottom: 0;
+  text-align: center;
+}

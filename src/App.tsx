@@ -21,11 +21,32 @@ export default function App(){
 
   return(
     <>
-    <div className="product-container">
-      {products.map((item, index) => (
-        <div className="product-item" key={item.id}>{item.title}</div>
-      ))}
+<div className="container">
+  <div className="row">
+    <div className="col-lg-12 col-md-12 mb-12 text-center">
+      <div className="title">
+        <h1>PRODUCTS</h1>
+      </div>
     </div>
+    {products.map((item, index) => (
+      <div className="col-lg-4 col-md-6 mb-4" key={item.id}>
+        <div className="card h-100">
+          <div className="card-body">
+            <h4 className="card-title">{item.title}</h4>
+            <h6 className="card-description">{item.description}</h6>
+          </div>
+        </div>
+      </div>
+    ))}
+    <div className="col-lg-12 col-md-12 mb-12 text-center">
+      <div className="footer">
+        <h3>FOOTER</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
   </>
 )
 }
