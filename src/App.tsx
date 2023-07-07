@@ -7,7 +7,7 @@ import './components/Product'
 
 export default function App() {
 
-  const [products, setProducts] = useState<Product[]>([]); // tady any se mi nelibi, ale jinak :never
+  const [products, setProducts] = useState<Product[]>([]); 
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
@@ -27,7 +27,7 @@ export default function App() {
         <div className="row">
           <Header value='PRODUCTS' />
           {products.map((item) => (
-            <ProductList title={item.title} desc={item.description} id={item.key} image={item.images[0]}/>
+            <ProductList title={item.title} description={item.description} key={item.key} image={item.images[0]}/>
           ))}
           <Footer textValue="Footer" />
         </div>

@@ -1,6 +1,6 @@
 type Product = {
-    id: number
+    key: number
     title: string
     description: string
-    image: string[]
+    image: string
 };
