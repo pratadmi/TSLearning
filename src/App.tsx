@@ -3,11 +3,11 @@ import "./styles.css"
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { ProductList } from './components/Productlist'
-
+import './components/Product'
 
 export default function App() {
 
-  const [products, setProducts] = useState<any[]>([]); // tady any se mi nelibi, ale jinak :never
+  const [products, setProducts] = useState<Product[]>([]); // tady any se mi nelibi, ale jinak :never
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
