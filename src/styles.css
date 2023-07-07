@@ -17,29 +17,47 @@
 
 @media (max-width: 767px) {
   .product-item {
-    width: calc(50% - 20px); /* On smaller screens, each item takes 50% width with 20px spacing */
+    width: calc(50% - 20px); 
   }
 }
 
 @media (max-width: 479px) {
   .product-item {
-    width: 100%; /* On even smaller screens, each item takes 100% width */
+    width: 100%; 
   }
 }
 
 .card {
-  border: 5px solid #ddd;
-  border-radius: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
   width: 100%;
-  padding-top: 100%;
-  position: relative;
+  overflow: hidden;
 }
 
-.card .card-body {
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-image:before {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 244, 244, 0.5); 
+  z-index: 1;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+  padding: 8px;
 }
 
 .card-title {
@@ -47,8 +65,7 @@
 }
 
 .card-description {
-  width: 100%;
-  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .title {
