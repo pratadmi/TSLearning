@@ -18,7 +18,10 @@ export const ProductList = () => {
     return (
         <>
             {products.map((item) => (
-                <Product title={item.title} description={item.description} key={item.id} image={item.images[0]} />
+                <Product title={item.title}
+                 description={item.description}
+                  key={item.id}
+                   image={item.images[0]} />
             ))}
         </>
     );
