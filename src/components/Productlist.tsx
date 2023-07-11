@@ -67,8 +67,8 @@ export const ProductList = () => {
         console.log("filtered3")
         setProducts((prevState) => {
             const result: ProductType[] = []
-            prevState.forEach((product)=>{
-                if(product.price < 100){
+            prevState.forEach((product) => {
+                if (product.price < 100) {
                     result.push(product)
                 }
             })
@@ -79,11 +79,12 @@ export const ProductList = () => {
 
     }
 
+    const filterProducts4 = () => setProducts(prevState => prevState.filter(product => product.price < 100));
 
     return (
         <>
             <div>
-                <button onClick={() => filterProducts3()} type="button">Filter under 100</button>
+                <button onClick={() => filterProducts4()} type="button">Filter under 100</button>
 
             </div>
             <div>
