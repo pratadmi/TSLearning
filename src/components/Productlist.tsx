@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Product as ProductComponent } from './Product';
+import { Product } from "./Product"
 
 export const ProductList = () => {
 
@@ -18,7 +18,7 @@ export const ProductList = () => {
     return (
         <>
             {products.map((item) => (
-                <ProductComponent title={item.title} description={item.description} key={item.key} image={item.images[0]} />
+                <Product title={item.title} description={item.description} key={item.id} image={item.images[0]} />
             ))}
         </>
     );
